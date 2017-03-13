@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5BD1BB2D-2AD6-4668-9640-AE4D78C4FEF2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AmazonAPI</RootNamespace>
+    <AssemblyName>AmazonAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FulfillmentInventory_2010-10-01_v2014-09-30">
+      <HintPath>C:\Users\his_o\Desktop\AmazonAPIs\MWSFulfillmentInventoryCSharpClientLibrary-2010-10-01._V294026393_\dist\FulfillmentInventory_2010-10-01_v2014-09-30.dll</HintPath>
+    </Reference>
+    <Reference Include="MWSClientCsRuntime-1.0">
+      <HintPath>C:\Users\his_o\Desktop\AmazonAPIs\MWSProductsCSharpClientLibrary-2011-10-01._V269521071_\dist\MWSClientCsRuntime-1.0.dll</HintPath>
+    </Reference>
+    <Reference Include="MWSFinances_2015-05-01_v2015-09-03">
+      <HintPath>C:\Users\his_o\Desktop\AmazonAPIs\MWSFinancesCSharpClientLibrary-2015-05-01._V312120327_\dist\MWSFinances_2015-05-01_v2015-09-03.dll</HintPath>
+    </Reference>
+    <Reference Include="MWSFulfillmentOutboundShipment_2010-10-01_v2016-10-19">
+      <HintPath>C:\Users\his_o\Desktop\AmazonAPIs\MWSFulfillmentOutboundShipmentCSharpClientLibrary-2010-10-01._V528227212_\dist\MWSFulfillmentOutboundShipment_2010-10-01_v2016-10-19.dll</HintPath>
+    </Reference>
+    <Reference Include="MWSInbound_2010-10-01_v2016-10-05">
+      <HintPath>C:\Users\his_o\Desktop\AmazonAPIs\MWSFulfillmentInboundShipmentCSharpClientLibrary-2010-10-01._V277140936_\dist\MWSInbound_2010-10-01_v2016-10-05.dll</HintPath>
+    </Reference>
+    <Reference Include="MWSMerchantFulfillment_2015-06-01_v2016-03-30">
+      <HintPath>C:\Users\his_o\Desktop\AmazonAPIs\MWSMerchantFulfillmentCSharpClientLibrary-2015-06-01._V525829168_\dist\MWSMerchantFulfillment_2015-06-01_v2016-03-30.dll</HintPath>
+    </Reference>
+    <Reference Include="MWSOrders_2013-09-01_v2017-02-22">
+      <HintPath>C:\Users\his_o\Desktop\AmazonAPIs\MWSOrdersCSharpClientLibrary-2013-09-01._V533357708_\dist\MWSOrders_2013-09-01_v2017-02-22.dll</HintPath>
+    </Reference>
+    <Reference Include="MWSProducts_2011-10-01_v2016-06-01">
+      <HintPath>C:\Users\his_o\Desktop\AmazonAPIs\MWSProductsCSharpClientLibrary-2011-10-01._V269521071_\dist\MWSProducts_2011-10-01_v2016-06-01.dll</HintPath>
+    </Reference>
+    <Reference Include="MWSRecommendations_2013-04-01_v2015-06-18">
+      <HintPath>C:\Users\his_o\Desktop\AmazonAPIs\MWSRecommendationsCSharpClientLibrary-2013-04-01._V316922852_\dist\MWSRecommendations_2013-04-01_v2015-06-18.dll</HintPath>
+    </Reference>
+    <Reference Include="MWSSellers_2011-07-01_v2015-06-18">
+      <HintPath>C:\Users\his_o\Desktop\AmazonAPIs\MWSSellersCSharpClientLibrary-2011-07-01._V316922798_\dist\MWSSellers_2011-07-01_v2015-06-18.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MWS.cs" />
+    <Compile Include="MWS.FBAInboundService.cs" />
+    <Compile Include="MWS.FBAInventoryService.cs" />
+    <Compile Include="MWS.FBAOutboundService.cs" />
+    <Compile Include="MWS.MarketplaceWebServiceOrders.cs" />
+    <Compile Include="MWS.MarketplaceWebServiceProducts.cs" />
+    <Compile Include="MWS.MarketplaceWebServiceSellers.cs" />
+    <Compile Include="MWS.FinancesService.cs" />
+    <Compile Include="MWS.MerchantFulfillmentService.cs" />
+    <Compile Include="MWS.RecommendationsSectionService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
